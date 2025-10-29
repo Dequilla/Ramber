@@ -1,0 +1,18 @@
+AlignAfterOpenBracket: AlwaysBreak
+AlignArrayOfStructures: Right
+SpacesInParens: Custom
+SpacesInParensOptions:
+  ExceptDoubleParentheses: true
+  InConditionalStatements: true
+  InCStyleCasts: false
+  InEmptyParentheses: false
+  Other: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceAfterTemplateKeyword: true
+NamespaceIndentation: All
+SortIncludes: Never
+LambdaBodyIndentation: Signature
+IndentWidth: 4
+BreakBeforeBraces: Allman
+Language: Cpp
+Standard: Latest
