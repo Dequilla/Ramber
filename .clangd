@@ -3,4 +3,7 @@ CompileFlags:           # Tweak the parse settings
   CompilationDatabase: ./build/
 Completion:
   HeaderInsertion: Never 
+Diagnostics:
+  Includes:
+    IgnoreHeader: .*\.inl
 

@@ -19,7 +19,14 @@ namespace ramber
         Mat4<Type> &operator=( const Mat4<Type> &other ) = default;
 
         operator std::string() const;
+
+        void transpose();
     };
+
+    using Mat4f = Mat4<float>;
+    using Mat4d = Mat4<double>;
+    using Mat4i = Mat4<i32>;
+    using Mat4u = Mat4<u32>;
 
 } // namespace ramber
 
