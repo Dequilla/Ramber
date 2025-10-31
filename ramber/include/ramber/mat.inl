@@ -58,4 +58,22 @@ namespace ramber
         *this = newMat;
     }
 
+    template <typename Type>
+    Mat4<Type> Mat4<Type>::operator*( const Mat4<Type> &other ) const
+    {
+        Mat4<Type> n;
+        for ( u32 y = 0; y < 4; y++ )
+        {
+            for ( u32 x = 0; x < 4; x++ )
+            {
+                n.data[x][y] = static_cast<Type>( 0 );
+                for ( u32 inner = 0; inner < 4; inner++ )
+                {
+                    n.data[x][y] += this->data[inner][y] * other.data[x][inner];
+                }
+            }
+        }
+
+        return n;
+    }
 } // namespace ramber

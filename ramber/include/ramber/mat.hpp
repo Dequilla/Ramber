@@ -21,6 +21,8 @@ namespace ramber
         operator std::string() const;
 
         void transpose();
+
+        Mat4<Type> operator*( const Mat4<Type> &other ) const;
     };
 
     using Mat4f = Mat4<float>;
