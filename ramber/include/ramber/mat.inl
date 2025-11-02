@@ -104,4 +104,19 @@ namespace ramber
 
         return n;
     }
+
+    template <typename Type>
+    Vec4<Type> Mat4<Type>::operator*( const Vec4<Type> &other ) const
+    {
+        Vec4<Type> v;
+        for ( u32 y = 0; y < 4; y++ )
+        {
+            v.data[y] = static_cast<Type>( 0 );
+            for ( u32 x = 0; x < 4; x++ )
+            {
+                v.data[y] += this->data[x][y] * other.data[x];
+            }
+        }
+        return v;
+    }
 } // namespace ramber

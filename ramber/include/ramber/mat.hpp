@@ -1,5 +1,6 @@
 #pragma once
 #include <ramber/types.hpp>
+#include <ramber/vec.hpp>
 #include <string>
 
 namespace ramber
@@ -26,6 +27,7 @@ namespace ramber
         void transpose();
 
         Mat4<Type> operator*( const Mat4<Type> &other ) const;
+        Vec4<Type> operator*( const Vec4<Type> &other ) const;
     };
 
     using Mat4f = Mat4<float>;
