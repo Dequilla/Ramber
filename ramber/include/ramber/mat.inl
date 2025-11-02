@@ -18,6 +18,34 @@ namespace ramber
         }
     }
 
+    template <typename Type>
+    Mat4<Type>::Mat4(
+        std::array<Type, 4> row1, std::array<Type, 4> row2,
+        std::array<Type, 4> row3, std::array<Type, 4> row4 )
+    {
+        for ( u32 y = 0; y < 4; y++ )
+        {
+            for ( u32 x = 0; x < 4; x++ )
+            {
+                switch ( y )
+                {
+                case 0:
+                    data[x][y] = row1[x];
+                    break;
+                case 1:
+                    data[x][y] = row2[x];
+                    break;
+                case 2:
+                    data[x][y] = row3[x];
+                    break;
+                case 3:
+                    data[x][y] = row4[x];
+                    break;
+                };
+            }
+        }
+    }
+
     template <typename Type> Mat4<Type> Mat4<Type>::identity()
     {
         Mat4<Type> m;

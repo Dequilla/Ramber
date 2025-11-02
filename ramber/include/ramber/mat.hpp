@@ -12,6 +12,9 @@ namespace ramber
 
         Mat4() = default;
         Mat4( Type all );
+        Mat4(
+            std::array<Type, 4> row1, std::array<Type, 4> row2,
+            std::array<Type, 4> row3, std::array<Type, 4> row4 );
         static Mat4<Type> identity();
 
         Mat4( Mat4<Type> &other ) = default;
